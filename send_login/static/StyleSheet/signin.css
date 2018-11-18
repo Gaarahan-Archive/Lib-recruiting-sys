@@ -1,0 +1,78 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: url("../img/bg.jpg") no-repeat 0 0 / cover;
+    width: 100%;
+    height: 100%;
+}
+#page-title{
+  margin-top: 9%;
+  margin-bottom: 5%;
+}
+.headPic{
+  border: 1px gray solid;
+  width: 50px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+@media (min-width: 768px) {
+  .modal-dialog{
+    width: 760px;
+  }
+  .form-horizontal{
+    width: 750px;
+  }
+  .form-group{
+    margin-bottom: 40px;
+  }
+}
+
+#yhm,#mm{
+  max-width: 600px;
+}
+#dl{
+  max-width: 500px;
+  min-width: 125px;
+  width: 50%;
+}
+
+label{
+  float: left;
+}
+
+.tips-warning{
+  font-size: 16px;
+  background-color: #ffa078;
+  line-height: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+.submit{
+    width: 80%;
+    margin: 160px auto;
+    border: 1px solid #fdffff;
+    border-radius: 5px;
+}
+.point{
+    margin-top:20px ;
+    padding: 10px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 18px;
+}
+.button{
+     margin: 10px 100px 20px;
+     background-color: #e8e59d;
+     border: none;
+     color: #000000;
+}
+.alert{
+    position:fixed;
+    width: 100%;
+    left: 0;
+    top:0;
+}

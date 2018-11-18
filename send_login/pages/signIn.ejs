@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录页面</title>
+    <link href="./resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./StyleSheet/signin.css">
+</head>
+<body>
+<!-- 按钮触发模态框 -->
+<%if(flagData.flag){%>
+<div class="alert alert-danger alert-dismissible " role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    用户名或密码错误,请重试
+</div>
+<%}%>
+
+<div class="submit">
+
+   <h4 class="point">想要加入我们吗? 点击下面按钮报名我们的纳新活动吧!</h4>
+   <button class="btn btn-primary btn-lg button" data-toggle="modal" data-target="#myModal">我要报名</button>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title text-center" id="modal-title"> 用户登录 </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal container" role="form" action="/postLogin" method="post">
+                    <div class="">
+                        <p style="display: none;" id="tips" class="tips-warning"> </p>
+                        <div class="form-group">
+                            <div class="input-group center-block">
+                                <label for="yhm">学号 ：</label>
+                                <input type="text" class="form-control center-block" name="yhm" id="yhm" value="" placeholder="学号" onblur="" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group center-block">
+                                <label for="mm">密码 ：</label>
+                                <label for="hidMm"></label><input type="password" name="mm" id="hidMm" style="display:none" autocomplete="off">
+                                <input type="password" class="form-control center-block" name="mm" id="mm" value="" placeholder="教务系统密码" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block col-lg-8 center-block" id="dl">登 录</button>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="./resource/jquery-3.3.1.min.js"></script>
+<script src="./resource/bootstrap/js/bootstrap.min.js"></script>
+<script src="./resource/bin/base64.js"></script>
+<script src="./resource/bin/jsbn.js"></script>
+<script src="./resource/bin/prng4.js"></script>
+<script src="./resource/bin/rng.js"></script>
+<script src="./resource/bin/rsa.js"></script>
+<script src="./JavaScript/send.js"></script>
+</body>
+</html>

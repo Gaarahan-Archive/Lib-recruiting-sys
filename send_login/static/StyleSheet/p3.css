@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: url("../img/bgLeft1.png");
+}
+
+h3{
+    display: inline-block;
+    color: white;
+    position: center;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+/*图片设置*/
+.back{
+    width: 16px;
+    height: 16px;
+    padding: 2px 6px 0 4px;
+}
+.photo1{
+    border: 1px;
+    left:0;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    padding-left:8px;
+}
+
+.photo2{
+    border: 1px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: -80px 452px;
+}
+
+#weChat{
+    width: 80%;
+    height: 90%;
+    margin:5% auto;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 1px rgba(255, 239, 94,0.5);
+    background: url("../img/bg1.jpg") no-repeat center;
+    background-size: cover;/*cover属性可以让图片填充父级元素*/
+}
+#head{
+    height: 8%;
+    background-color: #012;
+}
+#show{
+    height: 72%;
+}
+
+/*伪类写气泡*/
+.chat-bubble{
+    position: relative;
+    margin:12px 0 12px 12px;
+    padding:6px 8px;
+    word-break: break-all;
+    background:#fff;
+    border: 1px solid #989898;
+    border-radius: 5px;
+    max-width:195px;
+    font-size: 23px;
+}
+.chat-bubble-left {
+    left: 50px;
+    display: inline-block;
+}
+.chat-bubble-left:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    top:5px;
+    border: 10px solid;
+    border-color:transparent #989898 transparent  transparent ;
+}
+.chat-bubble-left:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left:-16px;
+    top:7px;
+    border: 8px solid;
+    border-color:transparent #ffffff transparent  transparent ;
+}
+.chat-bubble-right {
+    right: -220px;
+    background-color: #348903;
+}
+.chat-bubble-right:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -20px;
+    top:5px;
+    border: 10px solid;
+    border-color:transparent transparent transparent #348903;
+}
+.chat-bubble-right:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right:-16px;
+    top:7px;
+    border: 8px solid;
+    border-color:transparent transparent transparent #348903 ;
+}
+
+#onClick{
+    position: relative;
+    height: 20%;
+    background-color: rgb(253, 255, 255);
+    border-top: 1px solid #b6b6b6;
+    bottom:0;
+}
+#word{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 425px;
+    height: 60px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #348903;
+    text-align: center;
+    line-height:60px;
+  font-size: 23px;
+}
+#rightTalk{
+    position: relative;
+}
+#leftTalk{
+    position: relative;
+}
+.icon1{
+    position: relative;
+    margin-top: 20%;
+    font-size: 30px;
+    padding-left: 18px;
+    left: 0;
+}
+.icon2{
+    position: relative;
+    font-size: 30px;
+    padding-left: 18px;
+    left:47%;
+}
+.iconfont{
+    display: inline-block;
+    margin-top: 3px;
+}

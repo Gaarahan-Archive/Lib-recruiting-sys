@@ -1,0 +1,198 @@
+/* fontlezen_ddpic begin */
+
+#fonglezen_ddpic{ 
+	width:370px; 
+	height: 620px; 
+	position: absolute; 
+	z-index: 25; 
+	top:50%; 
+	left:50%; 
+	margin-left: -250px;
+	margin-top: -400px;
+}
+#fonglezen_ddpic li{ 
+	position: absolute; 
+	left: 40px; 
+	top: 100px; 
+	text-align: center;  
+	width:370px; 
+	height: 620px; 
+	box-sizing:border-box;
+}
+#fonglezen_ddpic li img{ 
+	width:100%; 
+	height: 100%; 
+	border:3px solid #fff;
+}
+
+@keyframes goimg{
+  from{ 
+  	opacity: 0; 
+  	transform:scale(1.5,1.5) rotateZ(40deg) translateY(100px) translateX(300px);
+  }
+  to{ 
+  	opacity: 1;
+  }
+}
+
+#fonglezen_ddpic li{ 
+	z-index: 5;
+}
+#fonglezen_ddpic li:nth-child(1){
+	z-index: 10;
+}
+#fonglezen_ddpic li:nth-child(2){
+	z-index: 9;
+}
+#fonglezen_ddpic li:nth-child(3){
+	z-index: 8;
+}
+#fonglezen_ddpic li:nth-child(4){
+	z-index: 7;
+}
+#fonglezen_ddpic li:nth-child(5){
+	z-index: 6;
+}
+
+#fonglezen_ddpic li img{ 
+	transform:rotateZ(12deg); 
+	z-index: 5;
+}
+#fonglezen_ddpic li:nth-child(1) img{
+	transform:rotateZ(0deg); 
+	z-index: 10; 
+}
+#fonglezen_ddpic li:nth-child(1) .goimg{
+	animation:goimg 0.6s; 
+	animation-fill-mode:both; 
+	animation-delay:2s;
+}
+
+#fonglezen_ddpic li:nth-child(2) img{
+	transform:rotateZ(3deg); 
+	z-index: 9;
+}
+#fonglezen_ddpic li:nth-child(2) .goimg{
+	animation:goimg 0.6s; 
+	animation-fill-mode:both; 
+	animation-delay:1.5s;
+}
+
+#fonglezen_ddpic li:nth-child(3) img{
+	transform:rotateZ(6deg); 
+	z-index: 8; 
+}
+#fonglezen_ddpic li:nth-child(3) .goimg{
+	animation:goimg 0.6s; 
+	animation-fill-mode:both; 
+	animation-delay:1s;
+}
+
+#fonglezen_ddpic li:nth-child(4) img{ 
+	transform:rotateZ(9deg); 
+	z-index: 7; 
+}
+#fonglezen_ddpic li:nth-child(4) .goimg{
+	animation:goimg 0.6s; 
+	animation-fill-mode:both; 
+	animation-delay:0.5s;
+}
+
+#fonglezen_ddpic li:nth-child(5) img{
+	transform:rotateZ(12deg); 
+	z-index: 6;
+}
+#fonglezen_ddpic li:nth-child(5) .goimg{ 
+	animation:goimg 0.6s; 
+	animation-fill-mode:both; 
+	animation-delay:0s;
+}
+
+
+@keyframes hideToright{
+	from{ 
+		opacity: 1; 
+		transform: translate3d(0,0,0);
+	}
+	to{ 
+		opacity: 0;
+		 transform: translate3d(100%,0,0);
+		  }
+}
+.hideToright{ 
+	animation:hideToright 0.5s; 
+	animation-fill-mode:both;
+}
+
+@keyframes hideToleft{
+	from{ opacity: 1; transform: translate3d(0,0,0); }
+	to{ opacity: 0; transform: translate3d(-100%,0,0); }
+}
+.hideToleft{ 
+	animation:hideToleft 0.5s; 
+	animation-fill-mode:both;
+}
+
+@keyframes backinit{
+	from{transform:rotateZ(3deg);}
+	to{transform:rotateZ(0deg);}
+}
+#fonglezen_ddpic li:nth-child(2) .backinit{  
+	animation:backinit 0.5s; 
+	animation-fill-mode:both; 
+	animation-delay:0;
+}
+
+@keyframes backinit1{
+	from{ transform:rotateZ(6deg);}
+	to{transform:rotateZ(3deg);}
+}
+#fonglezen_ddpic li:nth-child(3) .backinit1{  
+	animation:backinit1 0.5s; 
+	animation-fill-mode:both; 
+	animation-delay:0.15s;
+}
+
+@keyframes backinit2{
+	from{ transform:rotateZ(9deg);}
+	to{transform:rotateZ(6deg);}
+}
+#fonglezen_ddpic li:nth-child(4) .backinit2{  
+	animation:backinit2 0.5s; 
+	animation-fill-mode:both;
+	animation-delay:0.3s;
+}
+
+@keyframes backinit3{
+	from{ transform:rotateZ(12deg);}
+	to{transform:rotateZ(9deg);}
+}
+#fonglezen_ddpic li:nth-child(5) .backinit3{  
+	animation:backinit3 0.5s; 
+	animation-fill-mode:both;
+	animation-delay:0.45s;
+}
+
+@keyframes backinit4{
+	from{ transform:rotateZ(9deg);}
+	to{transform:rotateZ(12deg);}
+}
+#fonglezen_ddpic li:nth-child(5) .backinit4{  
+	animation:backinit4 0.5s; 
+	animation-fill-mode:both;
+}
+
+@keyframes flz_prev{
+	0%,100%{ transform:translate3d(0,0,0);}
+	30%{ transform:translate3d(-90%,0,0);}
+	60%{ transform:translate3d(-40%,0,0);}
+	80%{ transform:translate3d(-70%,0,0);}
+}
+
+@keyframes flz_next{
+	0%,100%{ transform:translate3d(0,0,0);}
+	30%{ transform:translate3d(90%,0,0);}
+	60%{ transform:translate3d(40%,0,0);}
+	80%{ transform:translate3d(70%,0,0);}
+}
+ /*fontlezen_ddpic begin */

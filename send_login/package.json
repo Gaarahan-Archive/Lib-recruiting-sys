@@ -1,0 +1,24 @@
+{
+  "name": "send_login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "bin": {
+    "send_login": "base64.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "latest",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jsdom": "^13.0.0",
+    "mysql": "^2.16.0",
+    "query-string": "^6.2.0"
+  }
+}
