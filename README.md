@@ -6,24 +6,10 @@
    点击登录时 ：index.html 
     -> login.js:88 : 通过公钥加密输入字串，将字串填入到密码框中,提交表单到
       http://www.zfjw.xupt.edu.cn/jwglxt/xtgl/login_slogin.html?time=当前时间
-    -> 
 
 - 11-5  22.07
 
 - data:
-login.slogin?time{	
-    Query string	
-        time	1541427183598
-        
-    Form data	
-        csrftoken	220189dc-6e16-4610-9bc1-26707b8f089a,220189dc6e1646109bc126707b8f089a
-        
-    mm	[…]
-        0	SBUUFejG7pFUSxZuVogWL69HGQTw66sF9sgQgrt7geFCtqxtx9eECnA2v/i1S6Zq+/t43TVcmdMYvLNuHtZUUwpQsBhjnRkYTk9I4Gc8wKaA76IqIGF+qiqqVCaa4B/f2FUJ2sp4W5HB5pzoIJ9sOVMAtzpVjz1dOTkL/HPiqOA=
-        1	SBUUFejG7pFUSxZuVogWL69HGQTw66sF9sgQgrt7geFCtqxtx9eECnA2v/i1S6Zq+/t43TVcmdMYvLNuHtZUUwpQsBhjnRkYTk9I4Gc8wKaA76IqIGF+qiqqVCaa4B/f2FUJ2sp4W5HB5pzoIJ9sOVMAtzpVjz1dOTkL/HPiqOA=
-        yhm	04163053
-}
-
 - public-key-url: http://www.zfjw.xupt.edu.cn/jwglxt/xtgl/login_getPublicKey.html?time=15414271835915414271835988
 - public-key:{
   "exponent":
