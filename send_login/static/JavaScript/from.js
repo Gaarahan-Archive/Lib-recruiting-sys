@@ -1,3 +1,9 @@
+let HEIGHT = $('window').height();
+
+$(window).resize(function() {
+  $('body').height(HEIGHT);
+});
+
 $('#sub-btn').on('click',()=>{
   let nameData = $('#name').val().trim();
   let classData  = $('#class').val();
@@ -7,22 +13,22 @@ $('#sub-btn').on('click',()=>{
   let warn = $('#warning');
 
   if(nameData === "" || nameData === null){
-    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项")
+    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项");
     warn.show();
     $('#name').focus();
   }else
   if(classData === "" || classData === null){
-    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项")
+    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项");
     warn.show();
     $('#class').focus();
   }else
   if(number === "" || number === null){
-    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项")
+    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项");
     warn.show();
     $('#number').focus();
   }else
   if(tel === "" || tel === null){
-    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项")
+    warn.html("<span class='glyphicon glyphicon-exclamation-sign'></span>请完善所有表单项");
     warn.show();
     $('#tel').focus();
   }else{

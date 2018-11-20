@@ -18,26 +18,24 @@ function touchMove(e){
 }
 function touchEnd(){
     if(Math.abs(diff) > 50 && canTouch){
-      console.log(curPage);
       if(diff > 0){
         if(curPage <= 1){ return; }
         $(`.page${curPage}`).removeClass('inTop outTop inDown outDown hide').addClass('outDown');
         curPage--;
         $(`.page${curPage}`).removeClass('inTop outTop inDown outDown hide').addClass('inDown');
       }else{
+        //前往报名页面
         if(curPage === 5){
-          $.ajax({url : "/redirect",
-            success : ()=>{
+          //显示跳转提示
+              $('#p5')[0].contentWindow.showTips();
               window.location.href = "/pageSignUp";
-            }
-          });
           return;
         }
         if(curPage >= PageL){ return; }
         $(`.page${curPage}`).removeClass('inTop outTop inDown outDown hide').addClass('outTop');
         curPage++;
         $(`.page${curPage}`).removeClass('inTop outTop inDown outDown hide').addClass('inTop');
-        if(curPage >= PageL){
+        if(curPage >= PageL + 1){
           $('.arrow').hide();
         }else{
           $('.arrow').show();
@@ -50,4 +48,8 @@ function touchEnd(){
         $(`.page${curPage - 1}, .page${curPage + 1}`).addClass('hide');
       },1000);
     }
+}
+function insideTouchEnd(diffent){
+  diff = diffent;
+  touchEnd();
 }

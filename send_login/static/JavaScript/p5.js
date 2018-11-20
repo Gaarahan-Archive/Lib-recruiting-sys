@@ -135,3 +135,10 @@ function hideCur(){
         return;
     curTar = 0;
 }
+
+//显示提示信息
+function showTips(){
+  let tips = $('#tips');
+  tips.show();
+  tips.addClass('tipFall');
+}

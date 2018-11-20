@@ -78,18 +78,18 @@ app.post('/postLogin',(request,response)=>{
         // 获取location
         const location = res.headers.location;
 
-        if (location === failLoca) {
-          response.redirect('/?flag=0');
-        } else if(location === successLoca_1 || location.indexOf(successLoca_2) >= 0 ){
+        if (location === failLoca) { // 认证失败
+          response.redirect('/pageSignUp?flag=0');
+        } else if(location === successLoca_1 || location.indexOf(successLoca_2) >= 0 ){ //登录成功
           ejs.renderFile(path.join(__dirname,'./pages/form.ejs'),{s_id},(err,mainPage)=>{
             if(err) throw err;
             else response.send(mainPage);
           });
-        }else{
-          response.redirect('/?flag=0');
+        }else{  //认证失败
+          response.redirect('/pageSignUp?flag=0');
         }
-      } else {
-        response.redirect('/?flag=0');
+      } else {  //其它原因失败
+        response.redirect('/pageSignUp?flag=0');
       }
     }).on('error', () => {
       response.send('出错啦，重新尝试下吧');
@@ -120,6 +120,6 @@ app.post('/postMessage',(req,res)=>{
   })
 });
 
-app.listen(8848,()=>{
+app.listen(80,()=>{
   console.log("server running ... ... ");
 });
