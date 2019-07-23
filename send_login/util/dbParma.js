@@ -1,7 +1,7 @@
 module.exports = {
   host : 'localhost',
   user : 'root',
-  password : '42272han',
+  password : '*********',
   database : 'ThoughtWorks',
   charset : 'UTF8'
 };
